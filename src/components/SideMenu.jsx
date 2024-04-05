@@ -15,7 +15,7 @@ export default function SideMenu({active}) {
         </a>
         <ul className="nav">
         {
-            navData.map(item=> (
+            navData.map(item => (
             <NavListItem key={item._id} item={item}/>
             ))
         }

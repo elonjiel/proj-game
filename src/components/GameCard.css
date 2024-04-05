@@ -1,0 +1,119 @@
+.game-card {
+    position: relative;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+    width: auto;
+    border: 1px solid rgba(0,0,0,0,0.1);
+    border-radius: 20px;
+    background: var(--bgColor);
+    box-shadow: -5px -5px 15px rgba(255,255,255,0.1),
+    5px 5px 15px rgba(0,0,0,0.35);
+}
+
+.game-card img {
+    border-radius: 20px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    object-position: center;
+    /* height: 25%;  */
+    height: 200px;
+    width: 100%;
+}
+
+
+.game-card .like{
+    position: absolute;
+    top: 24px;
+    right: 19px;
+    width: 40px;
+    height: 40px;
+    background: var(--bgColor);
+    padding: 5px;
+    border-radius: 0 0 0 20px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.game-card .like.active {
+    color: var(--second);
+}
+
+.game-card span {
+    color:#ffffff;
+}
+
+.game-card .game-feature {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-card .game-type {
+    background: var(--second);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.game-card .game-title {
+    margin-top: 10px;
+    font-family: 'Bauhaus 93';
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color:#ffffff;
+}
+
+.game-card .game-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.game-card .discount {
+    background: #ff0000ce;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.game-card .prev-price {
+    text-decoration: line-through;
+    text-decoration-color: #ff0000ce;
+    text-decoration-thickness: 3px;
+    font-size: 0.8rem;
+}
+
+.game-card .current-price {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.game-card .add-bag {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color:#ffffff;
+    background: var(--second);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0 20px 0;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.game-card .add-bag:hover {
+    background: var(--primary);
+}
+
+
+
+ 
