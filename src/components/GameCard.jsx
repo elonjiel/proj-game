@@ -1,8 +1,9 @@
-
+import React from 'react'
 import "./GameCard.css"
 import GameRating from "./GameRating.jsx"
+import Categories from "../pages/Categories.jsx"
 
-export default function GameCard( {game} ) {
+export default function GameCard( { game } ) {
   return (
     <div className="col-xl-3 col-lg-4 col-md-6">
        <div className="game-card">
@@ -14,7 +15,7 @@ export default function GameCard( {game} ) {
                 <span className="game-type">{game.level}</span>
                 <GameRating rating={game.rating} />
             </div>
-            <div className="game-title mt-4 mb-3">{game.title}</div>
+            <div className="game-title mt-2 mb-2">{game.title}</div>
             <div className="game-price">
                 {
                     game.discount !=0 && (

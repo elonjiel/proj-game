@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 //Swiper React Components
 import { Swiper, SwiperSlide  } from "swiper/react"
 //Swiper Styles
@@ -13,10 +13,17 @@ import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules"
 
 export default function GameSwiper({ games }) {
     const [active, setActive] = useState(false)
+    // const [click, setClick] = useState(true)
 
     const handleToggleVideo = () => {
         setActive(!active)
+       
     }
+
+    // const vidClick = () => {
+
+    //     setClick.true ?  setClick.current.swiper.autoplay.stop() : setClick.current.swiper.autoplay.play()
+    // }
 
 
   return (
@@ -34,18 +41,21 @@ export default function GameSwiper({ games }) {
             modifier: 1,
             slideShadows: true,
         }}
-        autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //     delay: 1000,
+        //     disableOnInteraction: false,
+        //     // pauseOnMouseEnter: true,
+        // }}
         modules={[EffectCoverflow, Navigation, Autoplay]}
         className="game-swiper"
-    >
+     >
+
+
         {games.map(game=>(
              <SwiperSlide key={game._id} >
                <GameSlide 
                game={game}
-               active={active} 
+               active={active}
                toggleVideo={handleToggleVideo}/>
                </SwiperSlide>
         ))}

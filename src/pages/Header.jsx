@@ -1,3 +1,4 @@
+import React from 'react'
 import "./Header.css"
 import userImage from "../images/user.jpg"
 export default function Header({toggleActive}) {

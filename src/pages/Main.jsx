@@ -1,17 +1,61 @@
 
-import { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import SideMenu from "../components/SideMenu"
 import Header from "./Header.jsx"
 import "./Main.css"
 import Home from "./Home.jsx"
+import Categories from "./Categories.jsx"
+import Library from "./Library.jsx"
+import Bag from "./Bag.jsx"
 
 
 export default function Main() {
-  const [active, setActive] = useState(false);
-  const [games, setGames] = useState([]);
- 
-  const handleToggleActive = () =>{
+  const [active, setActive] = useState(false)
+  const [games, setGames] = useState([])
+
+  const homeRef = useRef()
+  const categoriesRef = useRef()
+  const libraryRef = useRef()
+  const bagRef = useRef()
+
+  const sections = [
+    {
+      name: "home",
+      ref: homeRef,
+      active: true,
+    },
+    {
+      name: "categories",
+      ref: categoriesRef,
+      active: false,
+    },
+    {
+      name: "library",
+      ref: libraryRef,
+      active: false,
+    },
+    {
+      name: "bag",
+      ref: bagRef,
+      active: false,
+    },
+
+  ]
+
+  const handleToggleActive = () => {
     setActive(!active)
+  }
+
+  const handleSectionActive = target => {
+    sections.map(section => {
+      section.ref.current.classList.remove("active")
+      if(section.ref.current.id === target) {
+        section.ref.current.classList.add("active")
+        // console.log(section.ref.current)
+      }
+      return section
+    })
+
   }
 
   const fetchData = () => {
@@ -24,18 +68,22 @@ export default function Main() {
     .catch(e=>console.log(e.message))
   }
 
-  useEffect(()=>{
+  useEffect( () => {
     fetchData()
   }, [])
 
   return (
     
         <main>
-            <SideMenu active={active} />
+            <SideMenu active={active} sectionActive={handleSectionActive}/>
             <div className={`banner ${active ? 'active' : undefined}`}>
               <Header toggleActive={handleToggleActive} />
               <div className="container-fluid">
-              <Home games={games} />
+              <Home games={games} reference={homeRef}/>
+              <Categories games={games} reference={categoriesRef}/>
+              <Library games={games} reference={libraryRef}/>
+              <Bag games={games} reference={bagRef} />
+             
               </div>
             </div>
         </main>
