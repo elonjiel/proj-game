@@ -1,14 +1,39 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import "./GameCard.css"
 import GameRating from "./GameRating.jsx"
-import Categories from "../pages/Categories.jsx"
+import { AppContext } from '../App.jsx'
+
 
 export default function GameCard( { game } ) {
+
+    const {library, setLibrary, bag, setBag} = useContext(AppContext)
+
+    const handleAddToLibrary = game => {
+        setLibrary([...library, game])
+    }
+
+    const handleRemoveFromLibrary = game => {
+        setLibrary(library.filter(item => item._id!== game._id))
+    }
+
+    const handleAddToBag = game => {
+        if (bag.includes(game)) return
+        setBag([...bag, game])
+
+    }
   return (
     <div className="col-xl-3 col-lg-4 col-md-6">
        <div className="game-card">
         <img src={game.img} alt={game.title} className="img-fluid" />
-            <a href="#" className="like">
+            <a 
+                href="#" 
+                className={`like  ${library.includes(game) ? "active" : undefined}`}
+                onClick={
+                library.includes(game) 
+                ? ()=> handleRemoveFromLibrary(game) 
+                : ()=> handleAddToLibrary(game)
+              
+                }>
                 <i className="bi bi-heart-fill"/>
             </a>
             <div className="game-feature">
@@ -32,7 +57,7 @@ export default function GameCard( { game } ) {
                         ${((1 - game.discount) * game.price).toFixed(2)}
                     </span>
             </div>
-            <a href="#" className="add-bag">
+            <a href="#" className="add-bag" onClick={()=> handleAddToBag(game)}>
                 <i className="bi bi-bag-plus-fill"></i>
             </a>
        </div>

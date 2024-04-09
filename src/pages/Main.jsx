@@ -1,5 +1,6 @@
 
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef, useContext } from "react"
+import App, { AppContext } from "../App.jsx"
 import SideMenu from "../components/SideMenu"
 import Header from "./Header.jsx"
 import "./Main.css"
@@ -10,6 +11,7 @@ import Bag from "./Bag.jsx"
 
 
 export default function Main() {
+  const { library, bag } = useContext(AppContext)
   const [active, setActive] = useState(false)
   const [games, setGames] = useState([])
 
@@ -79,10 +81,17 @@ export default function Main() {
             <div className={`banner ${active ? 'active' : undefined}`}>
               <Header toggleActive={handleToggleActive} />
               <div className="container-fluid">
-              <Home games={games} reference={homeRef}/>
-              <Categories games={games} reference={categoriesRef}/>
-              <Library games={games} reference={libraryRef}/>
-              <Bag games={games} reference={bagRef} />
+                {games && games.length >0 && (
+                  <>
+                   <Home games={games} reference={homeRef}/>
+                   <Categories games={games} reference={categoriesRef}/>
+                   <Library games={library} reference={libraryRef}/>
+                   <Bag games={bag} reference={bagRef} />
+                  </>
+              
+                )}
+             
+             
              
               </div>
             </div>

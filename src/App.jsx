@@ -1,4 +1,4 @@
-import React from 'react' 
+import React, {useState} from 'react' 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-icons/font/bootstrap-icons.css"
 
@@ -7,11 +7,18 @@ import Main from "./pages/Main.jsx"
 import "./App.css"
 // import Navbar from "./components/Navbar/Navbar"
 
-
+export const AppContext = React.createContext();
 
 
 export default function App() {
+    const [library, setLibrary] = useState ([])
+    const [bag, setBag] = useState([])
+
     return (
-           <Main />
+        <>
+        <AppContext.Provider value={{ library, setLibrary, bag, setBag }}> 
+        <Main />
+        </AppContext.Provider>
+        </> 
     )
 }

@@ -41,7 +41,7 @@ header {
 .user-items .icon .bag {
     position: absolute;
     right: 0;
-    bottom: 10px;
+    bottom: 5px;
     font-size: 0.8rem;
     font-weight: 0.8rem;
     height: 20px;

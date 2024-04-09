@@ -10,6 +10,7 @@
      display: flex;
      flex-direction: column;
      transition: 1s;
+    
 }
 .side-menu .logo {
     font-family: 'Bauhaus 93';
@@ -54,10 +55,10 @@
 }
 
 .side-menu .social {
-    position: absolute;
-    bottom: 50px;
+    position: relative;
     display: flex;
-    align-items: center;
+    height: 100vh; 
+    align-items: flex-end;
     list-style: none;
     gap: 20px;
     transition: 0.5s;
@@ -96,3 +97,14 @@
     justify-content: center;
     align-items: center;
 }
+
+/* @media screen and (max-width:1550px){
+    
+    .side-menu .nav li a{
+        width: auto;
+    transition: 1s;
+    overflow: hidden;
+    align-items: center;
+    }
+  
+  } */

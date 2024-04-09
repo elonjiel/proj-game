@@ -6,14 +6,16 @@ import FilterListData from "../data/FilterListData"
 
 export default function Categories({ games, reference }) {
 
-    const [data, setData] = useState(games)
 
     const [filters, setFilters] = useState(FilterListData)
+    
+    const [data, setData] = useState(games)
+ 
 
     const handleFilterGames = category => {
         setFilters(
             filters.map(filter => {
-            filter.active = false;
+            filter.active = false
             if (filter.name === category) {
                 filter.active = true
             }
@@ -41,20 +43,21 @@ export default function Categories({ games, reference }) {
     }
  
   return (
-    <section id="categories" className="categories" ref={reference}>
+    <section id="categories" className="categories" ref={reference} >
         <div className="container-fluid mt-2">
             <div className="row">
                 <div className="col-lg-8 d-flex align-items-center justify-content-start" >
                     <ul className="filters" >
                         {filters.map(filter => (
                             <li 
-                            key={filter.id} 
+                            key={filter._id} 
                             className={`${filter.active ? "active" : undefined }`}
                             onClick={() => handleFilterGames(filter.name)}
                             >
                                 {filter.name}
                             </li>
-                        ))}
+                        ))}   
+                        
                     </ul>
                 </div>
                 <div className="col-lg-4 d-flex align-items-center justify-content-end">
@@ -67,13 +70,15 @@ export default function Categories({ games, reference }) {
                         placeholder="Search"
                         onChange={handleSearchGames}
                         />
+                             
+             
                     </div>
                 </div>
             </div>
             <div className="row" >
-                {data.map(game => (
-                    <GameCard key={game._id} game={game} />
-                ))}
+            {data.map(game => (
+                            <GameCard key={game._id} game={game} />
+                        ))}
             </div>
         </div>
 

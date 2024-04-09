@@ -31,7 +31,7 @@ export default function GameSwiper({ games }) {
         effect={'coverflow'}
         grabCursor={true}
         navigation={true}
-        // loop={true}
+        loop={true}
         centeredSlides={true}
         slidesPerView={"auto"}
         coverflowEffect={{
@@ -42,7 +42,7 @@ export default function GameSwiper({ games }) {
             slideShadows: true,
         }}
         // autoplay={{
-        //     delay: 1000,
+        //     delay: 2500,
         //     disableOnInteraction: false,
         //     // pauseOnMouseEnter: true,
         // }}

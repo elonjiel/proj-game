@@ -16,14 +16,14 @@ const NavListData = [
     {
         _id: 3,
         target: "library",
-        name: `My Library`,
+        name: `Library`,
         icon: "bi-heart",
         active: false,
     },
     {
         _id: 4,
         target: "bag",
-        name: `My Bag`,
+        name: `Bag`,
         icon: "bi-bag",
         active: false,
     },
