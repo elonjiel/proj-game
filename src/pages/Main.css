@@ -61,3 +61,13 @@ section.active {
     overflow-y: visible;
     opacity: 1;
 }
+
+@media screen and (max-width:768px){
+    .banner {
+        width: 100%;
+    }
+    .banner.active {
+        width: 100%;
+    }
+
+}

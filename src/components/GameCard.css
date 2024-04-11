@@ -21,6 +21,7 @@
 }
 
 
+
 .game-card .like{
     position: absolute;
     top: 24px;
@@ -87,7 +88,7 @@
     text-decoration: line-through;
     text-decoration-color: #ff0000ce;
     text-decoration-thickness: 3px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
 .game-card .current-price {
@@ -102,8 +103,8 @@
     color:#ffffff;
     background: var(--second);
     padding: 10px;
-    width: 40px;
-    height: 35px;
+    width: 50px;
+    height: 42px;
     display: flex;
     justify-content: center;
     align-items: center;

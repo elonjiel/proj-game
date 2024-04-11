@@ -8,6 +8,7 @@
     height: 300px;
 }
 
+
 .game-slider {
     position: relative;
     width: 100%;
@@ -144,6 +145,90 @@
     visibility: visible;
     opacity: 1;
     transform: scale(1);
+}
+
+@media screen and (max-width:1200px){
+    .swiper-slide{
+        width: 450px;
+        height: 275px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .swiper-slide{
+        width: 400px;
+        height: 255px;
+    }
+
+    .game-slider .content h2{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width:875px){
+    .swiper-slide{
+        width: 350px;
+        height: 245px;
+    }
+    .game-slider .content h2{
+        font-size: 1.5rem;
+    }
+    .game-slider .content p {
+        font-size: 0.6rem;
+    }
+    .game-slider .content .buttons .order-button {
+        font-size: 0.6rem;
+    }
+    .game-slider .content .buttons .play-button {
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width:520px){
+    .swiper-slide{
+        width: 300px;
+        height: 245px;
+    }
+}
+
+@media screen and (max-width:470px){
+    .swiper-slide{
+        width: 280px;
+        height: 225px;
+    }
+    .game-slider .content h2{
+        font-size: 1.3rem;
+    }
+    .game-slider .content p {
+        font-size: 0.55em;
+    }
+    .game-slider .content .buttons .order-button {
+        font-size: 0.55rem;
+    }
+    .game-slider .content .buttons .play-button {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width:420px){
+    .swiper-slide{
+        width: 240px;
+        height: 210px;
+    }
+    .game-slider .content h2{
+        font-size: 1.1rem;
+    }
+    .game-slider .content p {
+        font-size: 0.45em;
+        width: 90%;
+    }
+    .game-slider .content .buttons .order-button {
+        font-size: 0.45rem;
+    }
+    .game-slider .content .buttons .play-button {
+        font-size: 1.3rem;
+    }
 }
 
 

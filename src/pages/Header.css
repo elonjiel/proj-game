@@ -92,4 +92,26 @@ header {
     font-size: 0.6rem;
 }
 
+@media screen and (max-width:768px){
+    .user-items .avatar{
+        display:none;
+    }
+
+    .banner.undefined a.menu {
+
+        padding-left: 90px;
+        transition: 0.5s;
+    }
+
+    .banner.active a.menu {
+
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width:600px){
+    .banner.undefined a.menu {
+        padding-left: 55px;
+    }
+}
 

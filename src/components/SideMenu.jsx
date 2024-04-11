@@ -30,9 +30,9 @@ export default function SideMenu({active, sectionActive}) {
     <div className={`side-menu ${active ? 'active' : undefined}`}>
         <a href="" className="logo">
         <i className="bi bi-controller"></i>
-           <span className="brand">Play</span>
+           <span className="brand">Game</span>
         </a>
-        <ul className="nav">
+        <ul className="nav ">
         {
             navData.map(item => (
             <NavListItem 
@@ -42,7 +42,7 @@ export default function SideMenu({active, sectionActive}) {
             ))
         }
         </ul>
-        <ul className="social">
+        <ul className="social ">
         {
             socialData.map(item => (
                 <SocialListItem

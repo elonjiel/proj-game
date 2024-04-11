@@ -28,19 +28,6 @@
 
   {
     "_id": 3,
-    "title": "Dota II",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
-    "level": "High",
-    "category": "MOBA",
-    "rating": 5,
-    "discount": 0.3,
-    "price": 85.0,
-    "img": "./assets/games/dota-2-bg.jpg",
-    "trailer": "https://www.youtube.com/embed/-cSFPIwMEq4",
-    "active": false
-  },
-  {
-    "_id": 4,
     "title": "King of Fighters XV",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
     "level": "Entry",
@@ -52,13 +39,26 @@
     "trailer": "https://www.youtube.com/embed/_o7Ip64-Sio",
     "active": false
   },
+  {
+    
+    "_id": 4,
+    "title": "Dota II",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+    "level": "High",
+    "category": "MOBA",
+    "rating": 5,
+    "discount": 0.3,
+    "price": 85.0,
+    "img": "./assets/games/dota-2-bg.jpg",
+    "trailer": "https://www.youtube.com/embed/-cSFPIwMEq4",
+    "active": false
+  },
 
   {
     "_id": 5,
     "title": "Forza Horizon 5",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
-    "level": "Median"
-    ,
+    "level": "Median",
     "category": "Racing",
     "rating": 4,
     "discount": 0,

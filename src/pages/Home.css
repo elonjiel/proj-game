@@ -14,3 +14,9 @@ section.home .section-title {
     color: var(--second);
     padding-bottom: 10px;
 }
+
+/* @media screen and (max-width:991px){
+    .justify-content-end {
+        display
+    }
+} */

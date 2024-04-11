@@ -18,7 +18,7 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     color: #ffffff;
     font-size: 3.5rem;
     font-weight: 600;
@@ -60,6 +60,7 @@
     height: 100vh; 
     align-items: flex-end;
     list-style: none;
+    padding-left: 20px;
     gap: 20px;
     transition: 0.5s;
 }
@@ -69,6 +70,7 @@
     color:#ffffff;
     font-size: 1.5rem;
     transition: 0.3s;
+    
 }
 
 .side-menu .social li a:hover {
@@ -98,13 +100,136 @@
     align-items: center;
 }
 
-/* @media screen and (max-width:1550px){
-    
-    .side-menu .nav li a{
-        width: auto;
-    transition: 1s;
-    overflow: hidden;
-    align-items: center;
+
+
+@media screen and (max-width:1550px){
+    .side-menu .logo {
+        font-size: 3rem;
     }
-  
-  } */
+ 
+}
+@media screen and (max-width:1400px){
+    .side-menu .logo {
+        font-size: 2.6rem;
+    }
+    .side-menu .nav li a{
+        font-size: 1rem;
+    }
+    .side-menu .social li a{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width:1200px){
+    .side-menu{
+        padding-top: 20px;
+    }
+    .side-menu .logo {
+        font-size: 2.3rem;
+    }
+
+    .side-menu .nav li a{
+        font-size: 0.85rem;
+    }
+    .side-menu .social li a{
+        font-size: 1rem;
+    }
+    .side-menu.active .nav li a {
+        font-size: 1.6rem;
+    
+    }
+    .side-menu.active .social{
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:1120px){
+
+    .side-menu .logo {
+        font-size: 1.9rem;
+    }
+    .side-menu .nav li a{
+        font-size: 0.75rem;
+        padding: 10px 10px;
+    }
+    .side-menu.active .nav li a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .side-menu{
+       
+        padding: 10px;
+    }
+    .side-menu .logo {
+        font-size: 1.8rem;
+    }
+    .side-menu .nav li a{
+        font-size: 0.65rem;
+        gap: 15px;
+    }
+   
+}
+@media screen and (max-width:875px){
+    .side-menu{
+        padding: 10px;
+        
+    }
+    .side-menu .logo {
+        font-size: 1.6rem;
+        gap: 10px;
+    }
+    .side-menu .nav li a{
+        font-size: 0.65rem;
+    }
+    
+    .side-menu .social li a{
+        font-size: 0.9rem;
+    }
+
+    .side-menu .nav i{
+        font-size: 1rem;
+    }
+    .side-menu .social {
+        padding-right: 15px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items:first baseline;
+    }
+}
+
+@media screen and (max-width:768px){
+    .side-menu{
+        z-index: 1001;
+        position: absolute;
+        top: 30px;
+        height: 93.7vh;
+        width: 15%;
+        padding: 10px 3px;
+        opacity: 90%;
+        align-items: center;
+        transition: 0.5s;
+    }
+    .side-menu .nav-name,
+    .side-menu .brand {
+       display: none;
+    }
+    .side-menu .bi-controller{
+        font-size: 2.2rem;
+    }
+
+    .side-menu .social li a{
+        font-size: 1.2rem;
+    }
+
+
+    .side-menu.active {
+        padding: 12px 0px 0px 0px;
+        border: 0px;
+        width: 0px;
+        transition: 0.5s;
+     }
+}
+
