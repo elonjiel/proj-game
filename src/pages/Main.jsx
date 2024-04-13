@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef, useContext } from "react"
-import App, { AppContext } from "../App.jsx"
+import  { AppContext } from "../App.jsx"
 import SideMenu from "../components/SideMenu"
 import Header from "./Header.jsx"
 import "./Main.css"
@@ -8,6 +8,7 @@ import Home from "./Home.jsx"
 import Categories from "./Categories.jsx"
 import Library from "./Library.jsx"
 import Bag from "./Bag.jsx"
+
 
 
 export default function Main() {

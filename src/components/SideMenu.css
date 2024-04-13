@@ -20,7 +20,7 @@
     align-items: center;
     gap: 10px;
     color: #ffffff;
-    font-size: 3.5rem;
+    font-size: 3.3rem;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -62,15 +62,14 @@
     list-style: none;
     padding-left: 20px;
     gap: 20px;
-    transition: 0.5s;
+ 
 }
 
 .side-menu .social li a {
     text-decoration: none;
     color:#ffffff;
     font-size: 1.5rem;
-    transition: 0.3s;
-    
+    transition: 0.5s;
 }
 
 .side-menu .social li a:hover {
@@ -98,6 +97,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+ 
 }
 
 
@@ -142,6 +142,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+   
     }
 }
 @media screen and (max-width:1120px){
@@ -197,6 +198,7 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items:first baseline;
+        transition: 0.5s;
     }
 }
 

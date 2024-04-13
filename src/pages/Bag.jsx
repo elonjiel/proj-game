@@ -1,8 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import "./Bag.css"
 import ShopBagItem from '../components/ShopBagItem.jsx'
+import toast, { Toaster, ToastBar } from 'react-hot-toast';
+
 
 export default function Bag({games, reference}) {
+
+  const notify = () => {
+
+    toast.success("Check Out Successful!", {
+      position: "top-right"
+    });
+  }
 
   const [total, setTotal] = useState(0)
 
@@ -17,6 +26,7 @@ export default function Bag({games, reference}) {
   useEffect(()=>{
     setTotal(handleTotalPayment())
   }, [games])
+
 
 
   return (
@@ -63,9 +73,24 @@ export default function Bag({games, reference}) {
               <div className="col-lg-10 d-flex justify-content-end">
                 <div className="payment">
                   Total: {total}
-                  <a href="#">
-                    Check Out <i className="bi bi-wallet-fill"></i>
-                  </a>
+                  <a href="#" onClick={(notify)}>
+                  <Toaster>
+                    
+                    {(t) => (
+                      <ToastBar
+                        toast={t}
+                        style={{
+                          fontSize:15,
+                          fontWeight:700,
+                          ...t.style,
+                          animation: t.visible ? 'custom-enter 1s ease' : 'custom-exit 1s ease',
+                        }}
+                        />
+                      )}
+                      
+                   </Toaster>
+                      Check Out 
+                    <i className="bi bi-wallet-fill"></i></a>
                 </div>
               </div>
             </div>

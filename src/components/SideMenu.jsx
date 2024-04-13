@@ -30,7 +30,7 @@ export default function SideMenu({active, sectionActive}) {
     <div className={`side-menu ${active ? 'active' : undefined}`}>
         <a href="" className="logo">
         <i className="bi bi-controller"></i>
-           <span className="brand">Game</span>
+           <span className="brand">g.hub</span>
         </a>
         <ul className="nav ">
         {
