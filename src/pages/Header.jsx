@@ -8,7 +8,7 @@ export default function Header({toggleActive}) {
   return (
     <header>
         <a href="#" className="menu" onClick={toggleActive}>
-            <i className="bi bi-sliders"></i>
+            <i className="bi bi-arrow-left-right"></i>
         </a>
         <div className="user-items">
             <a href="#" className="icon">
